@@ -7,4 +7,4 @@ intent.setData(Uri.parse());
   action为intent.ACTION_VIEW 这是一个安卓系统内置动作
           intent.ACTION_DIAL 拨号内置动作（data部分要指定协议为tel）
   Uri.parse()将网址解析成uri对象 再调用setdata()将uri对象传递过去
-  
+  day 2016/7/24
