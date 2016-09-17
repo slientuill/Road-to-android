@@ -2,18 +2,24 @@ package com.example.slien.excited;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import java.util.Random;
+
 public class MainActivity extends Activity implements View.OnClickListener {
-    private Button button,button2;
+    private Button button,button2,button3;
     private EditText edit_Text;
     private ProgressBar progressBar;
+    private ImageView imageview;
     boolean angry=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +27,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         button=(Button)findViewById(R.id.button);
         button2=(Button)findViewById(R.id.button2);
+        button3=(Button)findViewById(R.id.button3);
         edit_Text=(EditText) findViewById(R.id.edit_text);
-        progressBar=(ProgressBar)findViewById(R.id.progressbar);
+        imageview=(ImageView)findViewById(R.id.imageview);
+        progressBar=(ProgressBar)findViewById(R.id.progress_bar);
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
     }
     public void onClick(View v){
         switch(v.getId()){
@@ -63,8 +72,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         angry=false;
                     }
                 });
-            dialog.show();
-            break;
+                dialog.show();
+                break;
+            case R.id.button3:
+               /* Intent intent =new Intent(MainActivity.this,SplashActivity.class);
+                startActivity(intent);*/
+                int selectPic=(int)(Math.random()*4);
+               // String path="pic"+selectPic;
+                switch (selectPic){
+                    case 1:
+                        imageview.setImageResource(R.drawable.pic1);
+                    break;
+                    case 0:
+                        imageview.setImageResource(R.drawable.pic0);
+                        break;
+                    case 2:
+                        imageview.setImageResource(R.drawable.pic2);
+                        break;
+                    case 3:
+                        imageview.setImageResource(R.drawable.pic3);
+                        break;
+                }
             default:
                 break;
         }
