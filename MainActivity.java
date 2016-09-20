@@ -16,7 +16,7 @@ import android.widget.ProgressBar;
 import java.util.Random;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    private Button button,button2,button3;
+    private Button button,button2,button3,button4;
     private EditText edit_Text;
     private ProgressBar progressBar;
     private ImageView imageview;
@@ -28,12 +28,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         button=(Button)findViewById(R.id.button);
         button2=(Button)findViewById(R.id.button2);
         button3=(Button)findViewById(R.id.button3);
+        button4=(Button)findViewById(R.id.button4);
         edit_Text=(EditText) findViewById(R.id.edit_text);
         imageview=(ImageView)findViewById(R.id.imageview);
         progressBar=(ProgressBar)findViewById(R.id.progress_bar);
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
     }
     public void onClick(View v){
         switch(v.getId()){
@@ -93,6 +95,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         imageview.setImageResource(R.drawable.pic3);
                         break;
                 }
+            case R.id.button4:
+                Intent intent =new Intent(MainActivity.this,SplashActivity.class);
+                startActivity(intent);
             default:
                 break;
         }
