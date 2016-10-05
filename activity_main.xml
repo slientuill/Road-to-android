@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#62c1ba">
+    <!-- padding 内边距   layout_margin 外边距
+  		android:layout_alignParentTop 布局的位置是否处于顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="351dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="36dip"
+        android:layout_marginTop="50dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="40dip">
+        <!-- 账号 -->
+        <TextView
+            android:id="@+id/login_user_input"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="MAC地址GPS位置检查工具"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:gravity="top"
+            android:layout_alignParentBottom="true"
+            android:textColor="#888"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/textView2" />
+        <!-- 密码 text -->
+        <!-- 登录button -->
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/gps"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Net homework"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_alignRight="@+id/login_user_input"
+            android:layout_alignEnd="@+id/login_user_input"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_above="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   ##version1.4##"
+            android:id="@+id/textView7"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_above="@+id/textView2"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/login_user_input"
+            android:layout_alignEnd="@+id/login_user_input" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+        <TextView  android:id="@+id/register_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:textColor="#888"
+            android:textColorLink="#FF0066CC"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="36dp" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="获取MAC信息"
+            android:id="@+id/mac_button"
+            android:layout_below="@+id/register_link"
+            android:layout_alignLeft="@+id/register_link"
+            android:layout_alignStart="@+id/register_link"
+            android:background="@null"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="获取GPS信息"
+            android:id="@+id/gps_button"
+            android:layout_below="@+id/mac_button"
+            android:layout_alignLeft="@+id/mac_button"
+            android:layout_alignStart="@+id/mac_button"
+            android:background="@null"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="检查链接"
+            android:id="@+id/checkInternet_button"
+            android:layout_below="@+id/gps_button"
+            android:layout_alignLeft="@+id/gps_button"
+            android:layout_alignStart="@+id/gps_button"
+            android:background="@null"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:gravity="center_vertical"
+            android:allowUndo="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="提交数据"
+            android:id="@+id/upLoadAnswer"
+            android:layout_below="@+id/checkInternet_button"
+            android:layout_alignLeft="@+id/checkInternet_button"
+            android:layout_alignStart="@+id/checkInternet_button"
+            android:background="@null"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/mac_text"
+            android:editable="false"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:layout_above="@+id/gps_text"
+            android:layout_alignTop="@+id/mac_button"
+            android:layout_alignRight="@+id/imageView2"
+            android:layout_alignEnd="@+id/imageView2"
+            android:layout_marginRight="15dp"
+            android:layout_alignLeft="@+id/imageView2"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/gps_text"
+            android:layout_alignLeft="@+id/mac_text"
+            android:layout_alignStart="@+id/mac_text"
+            android:layout_alignTop="@+id/gps_button"
+            android:layout_alignBottom="@+id/gps_button"
+            android:gravity="center_vertical"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:layout_alignRight="@+id/mac_text"
+            android:layout_alignEnd="@+id/mac_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/networktext"
+            android:layout_alignLeft="@+id/gps_text"
+            android:layout_alignStart="@+id/gps_text"
+            android:layout_alignTop="@+id/checkInternet_button"
+            android:layout_alignBottom="@+id/checkInternet_button"
+            android:layout_alignRight="@+id/gps_text"
+            android:layout_alignEnd="@+id/gps_text"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/ansewer_Text"
+            android:layout_alignBottom="@+id/upLoadAnswer"
+            android:layout_alignLeft="@+id/networktext"
+            android:layout_alignStart="@+id/networktext"
+            android:layout_alignTop="@+id/upLoadAnswer"
+            android:layout_alignRight="@+id/networktext"
+            android:layout_alignEnd="@+id/networktext"
+            android:gravity="center_vertical"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="260dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/make"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/gps_State_button"
+            android:layout_toRightOf="@+id/gps_State_button"
+            android:layout_toEndOf="@+id/gps_State_button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检查WIFI状态"
+            android:id="@+id/wifiState_button"
+            android:layout_below="@+id/upLoadAnswer"
+            android:layout_toRightOf="@+id/register_link"
+            android:layout_alignRight="@+id/upLoadAnswer"
+            android:layout_alignEnd="@+id/upLoadAnswer"
+            android:background="@null"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textSize="16sp"
+            android:gravity="center_vertical" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检查gps状态"
+            android:id="@+id/gps_State_button"
+            android:layout_below="@+id/wifiState_button"
+            android:layout_toRightOf="@+id/register_link"
+            android:layout_alignRight="@+id/wifiState_button"
+            android:layout_alignEnd="@+id/wifiState_button"
+            android:textSize="16sp"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:gravity="center_vertical"
+            android:background="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/wifiState_text"
+            android:layout_above="@+id/gps_State_button"
+            android:layout_alignLeft="@+id/ansewer_Text"
+            android:layout_alignStart="@+id/ansewer_Text"
+            android:layout_below="@+id/ansewer_Text"
+            android:layout_alignRight="@+id/ansewer_Text"
+            android:layout_alignEnd="@+id/ansewer_Text"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/gpsState_text"
+            android:layout_above="@+id/imageView2"
+            android:layout_alignLeft="@+id/wifiState_text"
+            android:layout_alignStart="@+id/wifiState_text"
+            android:layout_below="@+id/wifiState_text"
+            android:layout_alignRight="@+id/wifiState_text"
+            android:layout_alignEnd="@+id/wifiState_text"
+            android:textSize="16sp"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/showboard"
+            android:layout_alignLeft="@+id/gps_State_button"
+            android:layout_alignStart="@+id/gps_State_button"
+            android:layout_toLeftOf="@+id/mac_text"
+            android:layout_toStartOf="@+id/mac_text"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/imageView2" />
+
+    </RelativeLayout>
+
+</LinearLayout>
