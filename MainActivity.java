@@ -13,19 +13,13 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 public class MainActivity extends AppCompatActivity  {
     BallView bv;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bv=new BallView(this);
         setContentView(bv);
-        LinearLayout root=(LinearLayout)findViewById(R.id.root);
         bv=new BallView(this);
-
     }
-
-
 }

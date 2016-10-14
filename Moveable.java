@@ -2,9 +2,7 @@ package com.example.slien.andoirdanimation;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-
 /**
  * Created by slien on 2016/10/11.
  */
@@ -23,9 +21,9 @@ public class Moveable {
     Bitmap bitmap=null;//图片？？？
     BallThread bt=null;//小球移动线程
     boolean bfall=false;//滑落测试
+    boolean collision=false;
     int color;
     public Moveable(int x,int y,float r,Bitmap bitmap,int color){
-
         this.startX=x;
         this.x=x;
         this.startY=y;
@@ -34,17 +32,17 @@ public class Moveable {
         this.r=r;
         this.bitmap=bitmap;
         timeX=System.nanoTime();
-        this.v_x=-100+(int)(100*Math.random());
-        this.v_x*=10;
-        this.v_y=-100+(int)(100*Math.random());
-        this.v_y*=10;
+        this.v_x=-80+(int)(80*Math.random());
+        this.v_x*=8;
+        this.v_y=-80+(int)(80*Math.random());
+        this.v_y*=8;
         this.color=color;
         bt=new BallThread(this);
         bt.start();
     }
     public  void drawSelf(Canvas canvas){
-       // canvas.drawBitmap(bitmap,x,y,null);
-        Paint paint=new Paint();
+        //canvas.drawBitmap(bitmap,x,y,null); 使用图片
+        Paint paint=new Paint();//使用java graphic 画图
         paint.setColor(color);
         canvas.drawCircle(x,y,r,paint);
     }
