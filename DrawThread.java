@@ -38,8 +38,8 @@ public class DrawThread extends Thread {
                 long tempStamp=System.nanoTime();
                 long span=tempStamp-start;
                 start=tempStamp;
-                double fps=Math.round(100000000000.0/span*20)/100.0;
-                bv.fps="FPS:"+fps;
+                //double fps=Math.round(100000000000.0/span*20)/100.0;
+
             }
             try {
                 Thread.sleep(sleepSpan);
